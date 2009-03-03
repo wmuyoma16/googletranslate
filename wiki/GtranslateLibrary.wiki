@@ -88,6 +88,8 @@ public enum GLanguages {sq ,ar , bg , ca , zhCN , zhTW  , hr , cs , da , nl , en
 
 Функция *Create* служит для обработки запроса от сервера [http://translate.google.com translate.google.com]
 
-{{{public void Create(string source)}}}
+{{{
+public void Create(string source)
+}}}
 
 Единственый параметр функции _source _ должен содержать текст ответа от сервера.
