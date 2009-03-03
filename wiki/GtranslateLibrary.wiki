@@ -1,13 +1,43 @@
 #summary One-sentence summary of this page.
+= Описание =
+Библиотека использует пространоство имен *GoogleTranslate* и содержит 2 класса:
+||Название||Функция||
+||_GTranslate_||Основной статический класс, используется для перевода текста||
+||_GWords_||Служит для хранения результата перевода||
 
-= Introduction =
+и один Enum - GLanguages содержащий все доступные 42 языка.
 
-Add your content here.
+= Класс _GTranslate_ =
 
+== Переменные ==
 
-= Details =
+Класс содержит единственную публичную переменную - *SupportLanguages* типа string[] который содержит названия всех доступных языков.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== Функции ==
+
+Два варианта одной функции *Translate*:
+{{{
+public static GWords Translate(GLanguages inlang, GLanguages outlang, string trtext)
+public static GWords Translate(string inlang, string outlang, string trtext)
+}}}
+=== Первый вариант ===
+||Параметр||Тип||Значение||
+||*inlang*||_GLanguages_||Язык с которого переводить||
+||*outlang*||_GLanguages_||Язык на который переводить||
+||*trtext*||_String_||Текст для первода||
+=== Второй вариант ===
+||Параметр||Тип||Значение||
+||*inlang*||_String_||Язык с которого переводить||
+||*outlang*||_String_||Язык на который переводить||
+||*trtext*||_String_||Текст для первода||
+Возможные варианты языков:
+{{
+"Albanian","Arabic","Bulgarian","Catalan","Chinese (Simplified)",
+"Chinese (Traditional)","Croatian","Czech","Danish","Dutch",
+"English","Estonian","Filipino","Finnish","French","Galician",
+"German","Greek","Hebrew","Hindi","Hungarian","Indonesian",
+"Italian","Japanese","Korean","Latvian","Lithuanian",
+"Maltese","Norwegian","Polish","Portuguese","Romanian",
+"Russian","Serbian","Slovak","Slovenian","Spanish","Swedish"
+"Thai","Turkish","Ukrainian","Vietnamese"
+}}
