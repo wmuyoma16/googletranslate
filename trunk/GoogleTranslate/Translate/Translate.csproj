@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48798281-3C45-4E44-95CA-FB1EFAED8366}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Translate</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="LanguageGT.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="lang\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\swap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\icon.icns" />
+    <None Include="res\icon.png" />
+    <None Include="res\icon-128.png" />
+    <None Include="res\flags\bg.png" />
+    <None Include="res\flags\ar.png" />
+    <None Include="res\flags\ca.png" />
+    <None Include="res\flags\cs.png" />
+    <None Include="res\flags\da.png" />
+    <None Include="res\flags\de.png" />
+    <None Include="res\flags\el.png" />
+    <None Include="res\flags\en.png" />
+    <None Include="res\flags\es.png" />
+    <None Include="res\flags\et.png" />
+    <None Include="res\flags\fi.png" />
+    <None Include="res\flags\fr.png" />
+    <None Include="res\flags\gl.png" />
+    <None Include="res\flags\hi.png" />
+    <None Include="res\flags\hr.png" />
+    <None Include="res\flags\hu.png" />
+    <None Include="res\flags\id.png" />
+    <None Include="res\flags\it.png" />
+    <None Include="res\flags\iw.png" />
+    <None Include="res\flags\ja.png" />
+    <None Include="res\flags\ko.png" />
+    <None Include="res\flags\lt.png" />
+    <None Include="res\flags\lv.png" />
+    <None Include="res\flags\mt.png" />
+    <None Include="res\flags\nl.png" />
+    <None Include="res\flags\no.png" />
+    <None Include="res\flags\pl.png" />
+    <None Include="res\flags\pt.png" />
+    <None Include="res\flags\ro.png" />
+    <None Include="res\flags\ru.png" />
+    <None Include="res\flags\sk.png" />
+    <None Include="res\flags\sl.png" />
+    <None Include="res\flags\sq.png" />
+    <None Include="res\flags\sr.png" />
+    <None Include="res\flags\sv.png" />
+    <None Include="res\flags\th.png" />
+    <None Include="res\flags\tl.png" />
+    <None Include="res\flags\tr.png" />
+    <None Include="res\flags\uk.png" />
+    <None Include="res\flags\vi.png" />
+    <None Include="res\flags\zh-CN.png" />
+    <None Include="res\flags\zh-TW.png" />
+    <None Include="lang\ru.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gtranslate\Gtranslate.csproj">
+      <Project>{F3F7700A-8445-4D7B-BA6A-B7C4A6431A50}</Project>
+      <Name>Gtranslate</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
