@@ -86,7 +86,7 @@ public enum GLanguages {sq ,ar , bg , ca , zhCN , zhTW  , hr , cs , da , nl , en
 
 == Функции ==
 
-Функция *Create* служит для обработки запроса от сервера [http://translate.google.com translate.google.com]
+Функция *Create* служит для обработки ответа от сервера [http://translate.google.com translate.google.com]
 
 {{{
 public void Create(string source)
